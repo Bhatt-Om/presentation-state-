@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   root "territories#index"
   resources :territories 
+  
+  # root "cities#index"
+  resources :cities 
 end
