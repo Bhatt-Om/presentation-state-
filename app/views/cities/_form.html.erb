@@ -1,0 +1,10 @@
+<%= form_with model: @city do |f| %>
+
+  <%= f.label :name, "Name" %> 
+  <%= f.text_field :name %>
+   
+    <%= f.collection_select :territory_id, Territory.all, :id, :name %>
+
+    <%= f.submit %>
+
+<% end %>

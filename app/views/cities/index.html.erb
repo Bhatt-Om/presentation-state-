@@ -1,0 +1,10 @@
+<h1>Cities list</h1>
+
+
+<%= link_to "Create New Territory", new_city_path %>
+
+<% @cities.each do |city| %>
+  <h3><%= city.name.camelcase %></h3>
+  <%= link_to "Edit", edit_city_path(city) %>
+  <%= link_to "Delete", city_path(city), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+<% end %>
